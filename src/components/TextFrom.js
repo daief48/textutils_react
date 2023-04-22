@@ -15,6 +15,12 @@ export default function TextFrom(props) {
         let newText = " ";
         setText(newText)
     }
+    
+    const handlecopyClick = () =>{
+      console.log("Uppercase was clicked"+ text)
+      let newText = " ";
+      setText(newText)
+  }
     const handleOnChange = (event) =>{
         console.log("On change")
         setText(event.target.value)
@@ -29,6 +35,7 @@ export default function TextFrom(props) {
         <button className="btn btn-primary my-2 mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
         <button className="btn btn-primary my-2 mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
         <button className="btn btn-primary my-2 mx-2" onClick={handleclearClick}>Clear Text</button>
+        <button className="btn btn-primary my-2 mx-2" onClick={handlecopyClick}>Copy Text</button>
       </div>
     </div>
 
